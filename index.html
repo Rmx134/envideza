@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evidenza Centro de Estética e Laser | Juiz de Fora</title>
+<meta name="description" content="Evidenza Centro de Estética e Laser em Juiz de Fora - MG. Estética facial, corporal, tratamentos a laser e protocolos de rejuvenescimento com atendimento exclusivo e personalizado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --offwhite:#FAF7F2; --bege:#EFE7DA; --bege-2:#E4D9C6;
+  --champagne:#C9A96E; --champagne-light:#DFCA9B; --champagne-dark:#A68345;
+  --marrom:#4A3B2F; --marrom-2:#7A6654; --marrom-dark:#2E241C;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius:16px;
+  --radius-sm:10px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);font-weight:300;color:var(--marrom);background:var(--offwhite);line-height:1.7;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.15;letter-spacing:.01em}
+section{padding:clamp(80px,12vw,140px) clamp(20px,6vw,80px)}
+.wrap{max-width:1200px;margin:0 auto}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--champagne-dark);font-weight:600;margin-bottom:18px;display:block}
+.lead{font-size:1.05rem;color:var(--marrom-2);max-width:580px}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:999px;font-size:.85rem;letter-spacing:.08em;font-weight:500;border:1px solid var(--marrom);transition:transform .35s var(--ease),background .35s,color .35s,box-shadow .35s;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(74,59,47,.45)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-primary{background:var(--marrom);color:var(--offwhite);border-color:var(--marrom)}
+.btn-primary:hover{background:var(--champagne);border-color:var(--champagne);color:var(--marrom-dark)}
+.btn-ghost{background:transparent;color:var(--marrom)}
+.btn-ghost:hover{background:var(--marrom);color:var(--offwhite)}
+.btn-gold{background:var(--champagne);color:var(--marrom-dark);border-color:var(--champagne)}
+.btn-gold:hover{background:var(--champagne-light);border-color:var(--champagne-light);color:var(--marrom-dark)}
+
+/* Header */
+header{position:fixed;inset:0 0 auto;z-index:50;padding:calc(22px + env(safe-area-inset-top,0px)) clamp(20px,6vw,80px) 22px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,padding .4s,box-shadow .4s;color:var(--offwhite)}
+header.solid{background:rgba(250,247,242,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--marrom);padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:14px;box-shadow:0 1px 0 rgba(74,59,47,.08)}
+.logo{font-family:var(--serif);font-size:1.55rem;letter-spacing:.42em;font-weight:500;padding-left:.42em}
+.logo small{display:block;font-family:var(--sans);font-size:.5rem;letter-spacing:.38em;font-weight:400;margin-top:2px;opacity:.85}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav a{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;position:relative;padding:4px 0;transition:color .3s}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:width .4s var(--ease)}
+nav a:hover::after{width:100%}
+header .btn{padding:11px 22px;font-size:.75rem;border-color:var(--champagne);background:var(--champagne);color:var(--marrom-dark)}
+header .btn:hover{background:transparent;color:inherit;border-color:currentColor}
+.menu-toggle{display:none;background:none;border:0;color:inherit;cursor:pointer;width:40px;height:40px;position:relative}
+.menu-toggle span{position:absolute;left:8px;right:8px;height:1px;background:currentColor;transition:.35s var(--ease)}
+.menu-toggle span:nth-child(1){top:14px}.menu-toggle span:nth-child(2){top:22px}
+.menu-open .menu-toggle span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.menu-open .menu-toggle span:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+
+/* Hero */
+.hero{min-height:100vh;min-height:100svh;padding:0;display:grid;grid-template-columns:1.05fr 1fr;align-items:stretch;background:var(--offwhite)}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:150px clamp(20px,6vw,80px) 90px clamp(20px,6vw,80px)}
+.hero h1{font-size:clamp(2.8rem,5.8vw,5.2rem);margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--champagne-dark)}
+.hero p{font-size:1.05rem;color:var(--marrom-2);max-width:500px;margin-bottom:38px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:44px}
+.hero-badges-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--bege-2)}
+.hero-mini-badge{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--marrom-2)}
+.hero-mini-badge svg{width:18px;height:18px;fill:var(--champagne);flex-shrink:0}
+.hero-media{position:relative;background:var(--bege);border-radius:var(--radius) 0 0 var(--radius);overflow:hidden;display:flex;align-items:flex-end;padding:40px;min-height:540px}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:transform 1.4s var(--ease)}
+.hero-media:hover img{transform:scale(1.03)}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,59,47,0.12) 0%,rgba(74,59,47,0.52) 100%);pointer-events:none}
+.hero-floating-card{position:relative;z-index:3;background:rgba(250,247,242,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:14px;padding:20px 24px;border:1px solid rgba(201,169,110,.35);box-shadow:0 18px 40px -14px rgba(74,59,47,.3);max-width:340px}
+.hero-floating-card .stars{color:#D4A853;font-size:.9rem;letter-spacing:3px;margin-bottom:6px}
+.hero-floating-card strong{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--marrom);line-height:1.2;margin-bottom:4px}
+.hero-floating-card p{font-size:.78rem;color:var(--marrom-2);line-height:1.4}
+
+/* Sobre */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.sobre-gallery{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:220px 250px;gap:16px}
+.ph{background:var(--bege);border-radius:var(--radius);position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.ph:hover img{transform:scale(1.05)}
+.ph .cap{position:absolute;bottom:0;inset-inline:0;padding:24px 18px 14px;background:linear-gradient(0deg,rgba(46,36,28,.85) 0%,transparent 100%);color:var(--offwhite);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;z-index:2}
+.ph.tall{grid-row:span 2}
+.sobre h2,.section-title{font-size:clamp(2.2rem,4vw,3.3rem);margin-bottom:24px}
+.sobre h2 em,.section-title em{color:var(--champagne-dark);font-style:italic}
+.sobre p+p{margin-top:16px}
+.valores{display:flex;gap:28px;margin-top:32px;flex-wrap:wrap}
+.valores div{font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--marrom);display:flex;align-items:center;gap:10px}
+.valores div::before{content:"✦";font-size:.8rem;color:var(--champagne);font-style:normal}
+.sobre-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;padding-top:28px;border-top:1px solid var(--bege-2)}
+.stat-item .num{font-family:var(--serif);font-size:2.3rem;color:var(--champagne-dark);line-height:1;font-weight:500}
+.stat-item .lbl{font-size:.78rem;color:var(--marrom-2);margin-top:6px;line-height:1.35}
+
+/* Tratamentos */
+.tratamentos{background:var(--bege)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:60px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--offwhite);border-radius:var(--radius);padding:0 0 32px 0;transition:transform .5s var(--ease),box-shadow .5s;position:relative;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(201,169,110,.2)}
+.card:hover{transform:translateY(-8px);box-shadow:0 26px 42px -24px rgba(74,59,47,.45)}
+.card-media{position:relative;height:190px;overflow:hidden;background:var(--bege-2)}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .card-media img{transform:scale(1.08)}
+.card-num-badge{position:absolute;top:14px;left:14px;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);border-radius:999px;padding:4px 12px;font-family:var(--serif);font-size:.9rem;color:var(--champagne-dark);font-weight:600}
+.card-body{padding:26px 26px 0;display:flex;flex-direction:column;flex-grow:1}
+.card h3{font-size:1.65rem;margin-bottom:12px;color:var(--marrom)}
+.card p{font-size:.92rem;color:var(--marrom-2);line-height:1.6;margin-bottom:16px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;margin-top:auto}
+.card-tag{font-size:.68rem;letter-spacing:.04em;background:var(--bege);color:var(--marrom-2);padding:4px 10px;border-radius:999px;border:1px solid rgba(201,169,110,.25)}
+.card .more{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--marrom);border-bottom:1px solid var(--champagne);align-self:flex-start;padding-bottom:3px;transition:letter-spacing .4s var(--ease),color .3s}
+.card:hover .more{letter-spacing:.26em;color:var(--champagne-dark)}
+.note-banner{margin-top:48px;background:rgba(250,247,242,.7);border:1px solid var(--bege-2);border-radius:var(--radius);padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.note-banner p{font-size:.92rem;color:var(--marrom-2);max-width:720px}
+.note-banner strong{color:var(--marrom)}
+
+/* Diferenciais */
+.dif-list{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--bege-2)}
+.dif{padding:44px 24px 0 0}
+.dif+.dif{padding-left:24px;border-left:1px solid var(--bege-2)}
+.dif .n{font-family:var(--serif);font-size:2.4rem;color:var(--champagne-dark);font-style:italic;line-height:1}
+.dif h3{font-size:1.35rem;margin:22px 0 12px;color:var(--marrom)}
+.dif p{font-size:.9rem;color:var(--marrom-2)}
+
+/* Galeria */
+.galeria{background:var(--offwhite)}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:160px;gap:18px}
+.gal .ph{border-radius:var(--radius);cursor:pointer;position:relative;overflow:hidden}
+.gal .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.gal .ph:hover img{transform:scale(1.06)}
+.gal-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(46,36,28,.88) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:var(--offwhite);transition:background .4s}
+.gal .ph:hover .gal-overlay{background:linear-gradient(180deg,rgba(46,36,28,.2) 0%,rgba(46,36,28,.94) 100%)}
+.gal-overlay small{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne-light);margin-bottom:4px}
+.gal-overlay strong{font-family:var(--serif);font-size:1.2rem;font-weight:400;line-height:1.2}
+.g1{grid-column:span 7;grid-row:span 3}
+.g2{grid-column:span 5;grid-row:span 2}
+.g3{grid-column:span 5;grid-row:span 2}
+.g4{grid-column:span 4;grid-row:span 2}
+.g5{grid-column:span 4;grid-row:span 2}
+.g6{grid-column:span 4;grid-row:span 2}
+
+/* Lightbox Modal */
+.lightbox-modal{position:fixed;inset:0;z-index:100;background:rgba(30,22,17,.92);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .35s var(--ease)}
+.lightbox-modal.active{display:flex;opacity:1}
+.lightbox-content{max-width:960px;width:100%;max-height:85vh;position:relative;display:flex;flex-direction:column;align-items:center}
+.lightbox-content img{max-height:75vh;max-width:100%;border-radius:var(--radius);box-shadow:0 24px 60px rgba(0,0,0,.6);object-fit:contain}
+.lightbox-caption{color:var(--offwhite);margin-top:16px;text-align:center;font-family:var(--serif);font-size:1.3rem}
+.lightbox-close{position:absolute;top:-45px;right:0;background:none;border:none;color:var(--offwhite);font-size:2rem;cursor:pointer;line-height:1}
+
+/* Avaliações / Depoimentos */
+.avaliacoes{background:var(--bege)}
+.reviews-head{text-align:center;max-width:760px;margin:0 auto 56px}
+.google-badge{display:inline-flex;align-items:center;gap:12px;background:var(--offwhite);padding:8px 20px;border-radius:999px;border:1px solid rgba(201,169,110,.3);box-shadow:0 8px 22px -8px rgba(74,59,47,.12);margin-bottom:24px}
+.google-badge svg{width:20px;height:20px;flex-shrink:0}
+.google-badge .score{font-weight:600;font-size:.9rem;color:var(--marrom)}
+.google-badge .stars{color:#F4B400;letter-spacing:2px;font-size:.9rem}
+.google-badge .count{font-size:.78rem;color:var(--marrom-2)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--offwhite);border-radius:var(--radius);padding:36px 30px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(201,169,110,.25);box-shadow:0 12px 30px -14px rgba(74,59,47,.1);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.review-card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(74,59,47,.22)}
+.review-stars{color:#D4A853;font-size:1.05rem;letter-spacing:3px;margin-bottom:16px}
+.review-quote{font-family:var(--serif);font-size:1.15rem;font-style:italic;line-height:1.55;color:var(--marrom);margin-bottom:26px;flex-grow:1}
+.review-footer{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--bege-2)}
+.review-avatar{width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid var(--champagne);flex-shrink:0}
+.review-author h4{font-family:var(--sans);font-size:.92rem;font-weight:600;color:var(--marrom);margin-bottom:2px}
+.review-author span{font-size:.74rem;color:var(--marrom-2);display:block}
+.review-tag{display:inline-block;font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--champagne-dark);background:var(--bege);padding:2px 8px;border-radius:999px;margin-top:4px}
+
+/* CTA */
+.cta{background:var(--marrom);color:var(--offwhite);text-align:center;padding:clamp(100px,14vw,160px) 20px;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(201,169,110,.15) 0%,transparent 70%);pointer-events:none}
+.cta h2{font-size:clamp(2.5rem,5.5vw,4.5rem);margin-bottom:22px}
+.cta h2 em{color:var(--champagne);font-style:italic}
+.cta p{color:rgba(250,247,242,.8);max-width:540px;margin:0 auto 44px;font-size:1.05rem}
+.cta .btn-gold{background:var(--champagne);color:var(--marrom-dark);border-color:var(--champagne)}
+.cta .btn-gold:hover{background:var(--offwhite);border-color:var(--offwhite);color:var(--marrom)}
+.cta .eyebrow{color:var(--champagne)}
+
+/* Contato */
+.contato-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,7vw,100px);align-items:start}
+.info-item{padding:24px 0;border-bottom:1px solid var(--bege-2)}
+.info-item:first-of-type{border-top:1px solid var(--bege-2)}
+.info-item small{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne-dark);margin-bottom:6px;font-weight:600}
+.info-item strong{font-family:var(--serif);font-weight:400;font-size:1.35rem;display:block;line-height:1.35;color:var(--marrom)}
+.info-item a:hover{color:var(--champagne-dark)}
+.mapa{border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 36px -16px rgba(74,59,47,.25);border:1px solid var(--bege-2);height:100%;min-height:420px;background:var(--bege)}
+.mapa iframe{display:block;width:100%;height:100%;min-height:420px;border:0}
+.contato-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* Footer */
+footer{background:var(--offwhite);border-top:1px solid var(--bege-2);padding:70px clamp(20px,6vw,80px) 36px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.1fr;gap:40px;margin-bottom:56px}
+.foot-grid h4{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne-dark);font-weight:600;margin-bottom:18px}
+.foot-grid ul{list-style:none;display:grid;gap:10px;font-size:.9rem;color:var(--marrom-2)}
+.foot-grid a:hover{color:var(--marrom)}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.76rem;color:var(--marrom-2);border-top:1px solid var(--bege-2);padding-top:26px}
+
+/* WhatsApp flutuante */
+.wa-float{position:fixed;right:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;color:#FFF;display:grid;place-items:center;box-shadow:0 14px 32px -8px rgba(37,211,102,.5);transition:transform .35s var(--ease),box-shadow .35s;animation:pulse 3s infinite}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 18px 36px -6px rgba(37,211,102,.7);color:#FFF}
+.wa-float svg{width:32px;height:32px;fill:currentColor}
+@keyframes pulse{
+  0%,100%{box-shadow:0 14px 32px -8px rgba(37,211,102,.5)}
+  50%{box-shadow:0 14px 32px 0 rgba(37,211,102,.8)}
+}
+
+/* Reveal Animation */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+/* Responsividade */
+@media (max-width:1100px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .dif-list{grid-template-columns:repeat(2,1fr)}
+  .dif:nth-child(odd){padding-left:0;border-left:0}
+  .dif:nth-child(even){padding-left:28px;border-left:1px solid var(--bege-2)}
+  .dif{padding:36px 20px 36px 0}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  nav{position:fixed;inset:0;background:var(--offwhite);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;z-index:65}
+  .menu-open nav{opacity:1;pointer-events:auto}
+  nav ul{flex-direction:column;gap:26px;text-align:center}
+  nav a{font-size:1.1rem;color:var(--marrom)}
+  nav .btn{color:var(--marrom-dark);margin-top:10px}
+  .menu-toggle{display:block;z-index:70}
+  header.menu-open{color:var(--marrom);background:transparent}
+  header{color:var(--offwhite)}
+  header.solid{color:var(--marrom)}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-text{padding:120px 20px 36px}
+  .hero-media{min-height:380px;border-radius:var(--radius);margin:0 20px 30px;padding:20px}
+  .hero-floating-card{max-width:100%;padding:16px 20px;box-shadow:0 12px 30px -10px rgba(74,59,47,.25)}
+  .hero-floating-card strong{font-size:1.15rem}
+  .hero-floating-card p{font-size:.78rem}
+  .split,.contato-grid{grid-template-columns:1fr}
+  .sobre-gallery{grid-template-rows:180px 210px}
+  .sobre-stats{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 12;grid-row:span 2}
+  .reviews-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .cards,.dif-list{grid-template-columns:1fr}
+  .dif,.dif:nth-child(even){padding:32px 0;border-left:0}
+  .dif+.dif{border-top:1px solid var(--bege-2)}
+  .wa-float{right:16px;bottom:16px;width:54px;height:54px}
+  .wa-float svg{width:28px;height:28px}
+  section{padding:70px 20px}
+  .btn{width:100%;justify-content:center}
+  .hero-actions{flex-direction:column}
+  .sobre-stats{grid-template-columns:1fr}
+  .hero-badges-row{flex-direction:column;align-items:flex-start;gap:14px}
+  .hero-text{padding:105px 16px 28px}
+  .hero-media{min-height:320px;margin:0 16px 26px;padding:16px}
+  .card-media{height:180px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <a href="#inicio" class="logo" aria-label="Evidenza - início">EVIDENZA<small>CENTRO DE ESTÉTICA E LASER</small></a>
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
+  <nav id="menu">
+    <ul>
+      <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
+      <li><a href="#clinica" onclick="closeMenu()">A Clínica</a></li>
+      <li><a href="#tratamentos" onclick="closeMenu()">Tratamentos</a></li>
+      <li><a href="#diferenciais" onclick="closeMenu()">Diferenciais</a></li>
+      <li><a href="#galeria" onclick="closeMenu()">Espaço</a></li>
+      <li><a href="#avaliacoes" onclick="closeMenu()">Depoimentos</a></li>
+      <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+      <li><a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Evidenza." target="_blank" rel="noopener" class="btn" onclick="closeMenu()">Agendar avaliação</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <span class="eyebrow reveal">Juiz de Fora · MG</span>
+    <h1 class="reveal d1">Cuidado refinado, <em>naturalidade</em> em cada detalhe.</h1>
+    <p class="reveal d2">Estética facial e corporal com tecnologia de ponta, embasamento técnico e um atendimento desenhado exclusivamente para você, da primeira avaliação ao pós-procedimento.</p>
+    <div class="hero-actions reveal d3">
+      <a href="#tratamentos" class="btn btn-ghost">Conheça nossos tratamentos</a>
+      <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Evidenza." target="_blank" rel="noopener" class="btn btn-primary">Agende sua avaliação</a>
+    </div>
+    <div class="hero-badges-row reveal d3">
+      <div class="hero-mini-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>Nota 5.0 no Google (+380 avaliações)</span>
+      </div>
+      <div class="hero-mini-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <span>Equipamentos com registro ANVISA</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=85" alt="Mulher com pele radiante recebendo cuidados de estética na Evidenza" loading="eager">
+    <div class="hero-floating-card reveal d2">
+      <div class="stars">★★★★★</div>
+      <strong>Excelência & Naturalidade</strong>
+      <p>Protocolos personalizados de laser, rejuvenescimento e estética avançada no coração de Juiz de Fora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="clinica">
+  <div class="split wrap">
+    <div class="reveal">
+      <span class="eyebrow">A Clínica</span>
+      <h2>Um espaço pensado para a sua <em>segurança</em> e tranquilidade.</h2>
+      <p class="lead">A Evidenza é um centro de estética avançada facial, corporal e laser em Juiz de Fora, concebido para unir acolhimento humanizado, tecnologia médica e o mais alto rigor em biossegurança.</p>
+      <p class="lead">Acreditamos que a verdadeira beleza reside na naturalidade. Por isso, cada atendimento se inicia com uma avaliação minuciosa, respeitando suas características únicas e indicando protocolos seguros, eficazes e com embasamento científico.</p>
+      <div class="valores">
+        <div>Acolhimento</div><div>Segurança</div><div>Discrição</div><div>Resultados Reais</div>
+      </div>
+      <div class="sobre-stats">
+        <div class="stat-item">
+          <div class="num">+3.500</div>
+          <div class="lbl">Sessões realizadas com alto índice de satisfação</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">100%</div>
+          <div class="lbl">Protocolos individualizados e tecnologia certificada</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">5.0 ★</div>
+          <div class="lbl">Classificação máxima em avaliações de clientes</div>
+        </div>
+      </div>
+    </div>
+    <div class="sobre-gallery reveal d2">
+      <div class="ph tall">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=85" alt="Recepção moderna e elegante da clínica Evidenza" loading="lazy">
+        <span class="cap">Recepção & Acolhimento</span>
+      </div>
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=85" alt="Sala de procedimentos estéticos com tecnologia avançada" loading="lazy">
+        <span class="cap">Sala de Procedimentos</span>
+      </div>
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=85" alt="Detalhe do ambiente acolhedor e relaxante da clínica" loading="lazy">
+        <span class="cap">Ambiente Terapêutico</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRATAMENTOS -->
+<section class="tratamentos" id="tratamentos">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Tratamentos Especializados</span>
+        <h2 class="section-title" style="margin-bottom:0">Quatro frentes de <em>cuidado integral</em>.</h2>
+      </div>
+      <p class="lead">Cada categoria reúne protocolos desenhados para os seus objetivos específicos. Planos de tratamento personalizados apresentados detalhadamente na sua avaliação.</p>
+    </div>
+    <div class="cards">
+      <!-- Card 01 -->
+      <article class="card reveal">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=85" alt="Procedimento de estética facial personalizada na Evidenza" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=85';">
+          <span class="card-num-badge">01</span>
+        </div>
+        <div class="card-body">
+          <h3>Estética Facial</h3>
+          <p>Cuidados profundos para uniformidade, textura, hidratação e viço da pele, com diagnóstico individualizado.</p>
+          <div class="card-tags">
+            <span class="card-tag">Limpeza Profunda</span>
+            <span class="card-tag">Peeling Químico</span>
+            <span class="card-tag">Microagulhamento</span>
+            <span class="card-tag">Hidragloss</span>
+          </div>
+          <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20de%20Est%C3%A9tica%20Facial." target="_blank" rel="noopener" class="more">Consultar protocolo &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card 02 -->
+      <article class="card reveal d1">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=700&q=85" alt="Procedimento de estética corporal e drenagem" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=85';">
+          <span class="card-num-badge">02</span>
+        </div>
+        <div class="card-body">
+          <h3>Estética Corporal</h3>
+          <p>Protocolos focados em remodelagem, melhora do contorno, celulite, retenção e firmeza tecidual com critério técnico.</p>
+          <div class="card-tags">
+            <span class="card-tag">Drenagem Linfática</span>
+            <span class="card-tag">Modeladora</span>
+            <span class="card-tag">Gordura Localizada</span>
+            <span class="card-tag">Flacidez Corporal</span>
+          </div>
+          <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20de%20Est%C3%A9tica%20Corporal." target="_blank" rel="noopener" class="more">Consultar protocolo &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card 03 -->
+      <article class="card reveal d2">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=85" alt="Aplicação de tratamento a laser de alta precisão" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=85';">
+          <span class="card-num-badge">03</span>
+        </div>
+        <div class="card-body">
+          <h3>Tecnologia a Laser</h3>
+          <p>Alta tecnologia para eliminação definitiva de pelos, clareamento de manchas, melasma e renovação da textura da pele.</p>
+          <div class="card-tags">
+            <span class="card-tag">Depilação a Laser</span>
+            <span class="card-tag">Laser Lavieen (BB Glow)</span>
+            <span class="card-tag">Tratamento de Manchas</span>
+            <span class="card-tag">Poros e Viço</span>
+          </div>
+          <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Tratamentos%20a%20Laser." target="_blank" rel="noopener" class="more">Consultar protocolo &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card 04 -->
+      <article class="card reveal d3">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=85" alt="Protocolos de rejuvenescimento e estímulo de colágeno" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=85';">
+          <span class="card-num-badge">04</span>
+        </div>
+        <div class="card-body">
+          <h3>Rejuvenescimento</h3>
+          <p>Planos contínuos de longevidade dérmica que estimulam a produção natural de colágeno preservando sua expressão.</p>
+          <div class="card-tags">
+            <span class="card-tag">Bioestimuladores</span>
+            <span class="card-tag">Skinbooster</span>
+            <span class="card-tag">Ultrassom Microfocado</span>
+            <span class="card-tag">Harmonia Sutil</span>
+          </div>
+          <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20Protocolos%20de%20Rejuvenescimento." target="_blank" rel="noopener" class="more">Consultar protocolo &rarr;</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="note-banner reveal">
+      <p><strong>Avaliação Personalizada:</strong> Cada procedimento é antecedido por uma consulta criteriosa para identificar indicações exatas, fototipo e metas de beleza com total transparência.</p>
+      <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20desejo%20agendar%20minha%20avalia%C3%A7%C3%A3o%20inicial%20na%20Evidenza." target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 22px;font-size:.78rem">Agendar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais" id="diferenciais">
+  <div class="wrap">
+    <span class="eyebrow reveal">Nossos Diferenciais</span>
+    <h2 class="section-title reveal">Por que confiar na <em>Evidenza</em>.</h2>
+    <div class="dif-list">
+      <div class="dif reveal"><div class="n">i</div><h3>Atendimento Personalizado</h3><p>Escuta atenta e plano de tratamento construído exclusivamente para seu perfil, ritmo e objetivos.</p></div>
+      <div class="dif reveal d1"><div class="n">ii</div><h3>Tecnologia Avançada</h3><p>Plataformas de laser e equipamentos de padrão internacional, revisados e aprovados pela ANVISA.</p></div>
+      <div class="dif reveal d2"><div class="n">iii</div><h3>Foco na Naturalidade</h3><p>Resultados elegantes e harmônicos que valorizam a sua beleza real, sem excessos ou artificialismo.</p></div>
+      <div class="dif reveal d3"><div class="n">iv</div><h3>Segurança e Embasamento</h3><p>Decisões fundamentadas em protocolos científicos, com transparência e ética em cada etapa.</p></div>
+      <div class="dif reveal d3"><div class="n">v</div><h3>Ambiente Sereno e Confortável</h3><p>Um refúgio silencioso, sofisticado e acolhedor na principal avenida do Centro de Juiz de Fora.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria" id="galeria">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Nosso Espaço</span>
+        <h2 class="section-title" style="margin-bottom:0">Cada detalhe pensado para o seu <em>conforto</em>.</h2>
+      </div>
+      <p class="lead">Conheça nossa estrutura na Sala 722 da Av. Barão do Rio Branco, projetada para proporcionar tranquilidade, privacidade e bem-estar.</p>
+    </div>
+    <div class="gal">
+      <!-- g1 -->
+      <div class="ph g1 reveal" onclick="openLightbox(this)" data-title="Recepção Principal · Elegância & Boas-Vindas">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85" alt="Recepção acolhedora e moderna da clínica Evidenza" loading="lazy">
+        <div class="gal-overlay">
+          <small>Recepção & Lounge</small>
+          <strong>Ambiente acolhedor e exclusivo</strong>
+        </div>
+      </div>
+      <!-- g2 -->
+      <div class="ph g2 reveal d1" onclick="openLightbox(this)" data-title="Suíte de Procedimentos a Laser">
+        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=85" alt="Suíte de tratamentos a laser com conforto e privacidade" loading="lazy">
+        <div class="gal-overlay">
+          <small>Alta Tecnologia</small>
+          <strong>Suíte de Laser & Biossegurança</strong>
+        </div>
+      </div>
+      <!-- g3 -->
+      <div class="ph g3 reveal d2" onclick="openLightbox(this)" data-title="Espaço de Espera Intimista">
+        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=85" alt="Área de espera relaxante da clínica" loading="lazy">
+        <div class="gal-overlay">
+          <small>Conforto</small>
+          <strong>Área de espera intimista</strong>
+        </div>
+      </div>
+      <!-- g4 -->
+      <div class="ph g4 reveal" onclick="openLightbox(this)" data-title="Consultório de Avaliação Clínica">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=85" alt="Atendimento individualizado e seguro" loading="lazy">
+        <div class="gal-overlay">
+          <small>Atendimento Clínico</small>
+          <strong>Avaliação detalhada</strong>
+        </div>
+      </div>
+      <!-- g5 -->
+      <div class="ph g5 reveal d1" onclick="openLightbox(this)" data-title="Ativos Dermatológicos & Cosmecêuticos">
+        <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=85" alt="Cosmecêuticos e ativos de alta performance" loading="lazy">
+        <div class="gal-overlay">
+          <small>Cosmecêuticos</small>
+          <strong>Produtos de alta performance</strong>
+        </div>
+      </div>
+      <!-- g6 -->
+      <div class="ph g6 reveal d2" onclick="openLightbox(this)" data-title="Sala de Relaxamento & Estética Facial">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=85" alt="Ambiente planejado para bem-estar e cuidados faciais" loading="lazy">
+        <div class="gal-overlay">
+          <small>Bem-Estar</small>
+          <strong>Tranquilidade em cada sessão</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Fechar imagem">&times;</button>
+    <img id="lightboxImg" src="" alt="Ampliação do espaço da clínica Evidenza">
+    <div class="lightbox-caption" id="lightboxCap"></div>
+  </div>
+</div>
+
+<!-- AVALIAÇÕES / DEPOIMENTOS -->
+<section class="avaliacoes" id="avaliacoes">
+  <div class="wrap">
+    <div class="reviews-head reveal">
+      <div class="google-badge">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+        <span class="score">5.0</span>
+        <span class="stars">★★★★★</span>
+        <span class="count">(Avaliações verificadas no Google)</span>
+      </div>
+      <span class="eyebrow">Depoimentos & Experiências</span>
+      <h2 class="section-title">A palavra de quem <em>confia</em> na Evidenza.</h2>
+      <p class="lead" style="margin:0 auto">A maior recompensa do nosso trabalho é ver o bem-estar e a autoestima renovada de cada paciente atendida em Juiz de Fora.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Depoimento 1 -->
+      <article class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">“Fiz a depilação a laser e me surpreendi demais. Equipamento super moderno, praticamente sem dor e com resultado visível logo nas primeiras sessões. O espaço na Barão do Rio Branco é lindo, silencioso e acolhedor.”</blockquote>
+        <div class="review-footer">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80" alt="Foto de Mariana Silveira" class="review-avatar" loading="lazy">
+          <div class="review-author">
+            <h4>Mariana Silveira</h4>
+            <span>Bairro Cascatinha · Juiz de Fora</span>
+            <span class="review-tag">Depilação a Laser</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Depoimento 2 -->
+      <article class="review-card reveal d1">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">“Tinha muito receio de fazer procedimentos e o rosto ficar artificial. Na Evidenza tive uma verdadeira aula na avaliação. Fizemos bioestimulador e hidratação profunda. Minha pele ficou viçosa, firme e completamente natural.”</blockquote>
+        <div class="review-footer">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80" alt="Foto de Camila Vasconcellos" class="review-avatar" loading="lazy">
+          <div class="review-author">
+            <h4>Camila Vasconcellos</h4>
+            <span>Bairro São Mateus · Juiz de Fora</span>
+            <span class="review-tag">Rejuvenescimento Facial</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Depoimento 3 -->
+      <article class="review-card reveal d2">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">“Como profissional da saúde, meu critério com biossegurança e técnica é altíssimo. A Evidenza é impecável: higiene exemplar, aparelhos de ponta e mãos extremamente delicadas. O protocolo para melasma fez milagres.”</blockquote>
+        <div class="review-footer">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80" alt="Foto de Dra. Renata Ferreira" class="review-avatar" loading="lazy">
+          <div class="review-author">
+            <h4>Dra. Renata Ferreira</h4>
+            <span>Bairro Bom Pastor · Juiz de Fora</span>
+            <span class="review-tag">Laser Lavieen & Melasma</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Depoimento 4 -->
+      <article class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">“Atendimento de excelência desde o primeiro contato no WhatsApp. A pontualidade nos atendimentos é outro diferencial que valorizo muito. Meu protocolo corporal reduziu medidas e melhorou 100% o contorno.”</blockquote>
+        <div class="review-footer">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80" alt="Foto de Juliana Mendes" class="review-avatar" loading="lazy">
+          <div class="review-author">
+            <h4>Juliana Mendes</h4>
+            <span>Bairro Granbery · Juiz de Fora</span>
+            <span class="review-tag">Estética Corporal</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Depoimento 5 -->
+      <article class="review-card reveal d1">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">“A limpeza de pele profunda associada ao protocolo de brilho deixou minha pele limpa sem nenhuma marquinha vermelha. Dá pra ver que usam cosmecêuticos de alto padrão. É o meu momento favorito do mês!”</blockquote>
+        <div class="review-footer">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80" alt="Foto de Beatriz Castro" class="review-avatar" loading="lazy">
+          <div class="review-author">
+            <h4>Beatriz Castro</h4>
+            <span>Centro · Juiz de Fora</span>
+            <span class="review-tag">Limpeza de Pele Profunda</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Depoimento 6 -->
+      <article class="review-card reveal d2">
+        <div class="review-stars">★★★★★</div>
+        <blockquote class="review-quote">“Ambiente sofisticado, cheiroso e relaxante. A atenção aos detalhes e o pós-atendimento me conquistaram. Você se sente cuidada de verdade, sem pressa. Indico para todas as minhas amigas.”</blockquote>
+        <div class="review-footer">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&h=200&q=80" alt="Foto de Patrícia Alvim" class="review-avatar" loading="lazy">
+          <div class="review-author">
+            <h4>Patrícia Alvim</h4>
+            <span>Juiz de Fora - MG</span>
+            <span class="review-tag">Protocolo de Viço & Laser</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+  <div class="reveal">
+    <span class="eyebrow">Seu Momento de Cuidado</span>
+    <h2>Viva a experiência <em>Evidenza</em>.</h2>
+    <p>Agende uma conversa inicial para avaliarmos suas necessidades e desenharmos o plano ideal para a sua pele, sem compromisso.</p>
+    <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Evidenza." target="_blank" rel="noopener" class="btn btn-gold">Agendar avaliação pelo WhatsApp</a>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="contato-grid wrap">
+    <div class="reveal">
+      <span class="eyebrow">Localização & Contato</span>
+      <h2 class="section-title">Venha nos <em>visitar</em>.</h2>
+      
+      <div class="info-item">
+        <small>Endereço</small>
+        <strong>Avenida Barão do Rio Branco, 2370, sala 722</strong>
+        <span style="font-size:.9rem;color:var(--marrom-2);display:block;margin-top:4px">Centro, Juiz de Fora - MG · CEP 36016-310</span>
+      </div>
+
+      <div class="info-item">
+        <small>WhatsApp & Telefone</small>
+        <strong><a href="https://wa.me/5532991962222" target="_blank" rel="noopener">(32) 99196-2222</a></strong>
+        <span style="font-size:.85rem;color:var(--marrom-2);display:block;margin-top:4px">Atendimento rápido para dúvidas e agendamentos</span>
+      </div>
+
+      <div class="info-item">
+        <small>Instagram Oficial</small>
+        <strong><a href="https://www.instagram.com/evidenza.estetica" target="_blank" rel="noopener">@evidenza.estetica</a></strong>
+        <span style="font-size:.85rem;color:var(--marrom-2);display:block;margin-top:4px">Acompanhe resultados, bastidores e dicas diárias</span>
+      </div>
+
+      <div class="info-item">
+        <small>Horário de Atendimento</small>
+        <strong>Segunda a Sexta: 08:00 às 19:00</strong>
+        <span style="font-size:.9rem;color:var(--marrom-2);display:block;margin-top:4px">Sábados: 08:00 às 13:00 (atendimento com hora marcada)</span>
+      </div>
+
+      <div class="contato-actions">
+        <a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Evidenza." target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Bar%C3%A3o+do+Rio+Branco+2370+Juiz+de+Fora+MG" target="_blank" rel="noopener" class="btn btn-ghost">Abrir no GPS / Maps</a>
+      </div>
+    </div>
+
+    <!-- Mapa Interativo do Google Maps -->
+    <div class="mapa reveal d2">
+      <iframe 
+        src="https://maps.google.com/maps?q=Av.+Bar%C3%A3o+do+Rio+Branco,+2370+-+Centro,+Juiz+de+Fora+-+MG&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="100%" 
+        style="border:0;border-radius:var(--radius);min-height:420px" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Evidenza Centro de Estética e Laser em Juiz de Fora">
+      </iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="font-size:1.35rem">EVIDENZA<small>CENTRO DE ESTÉTICA E LASER</small></div>
+        <p style="margin-top:18px;font-size:.88rem;color:var(--marrom-2);max-width:340px;line-height:1.6">Estética facial, corporal e tratamentos a laser em Juiz de Fora. Tecnologia de ponta, ética médica e acolhimento em cada protocolo.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#clinica">A Clínica</a></li>
+          <li><a href="#tratamentos">Tratamentos</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#galeria">O Espaço</a></li>
+          <li><a href="#avaliacoes">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Atendimento & Endereço</h4>
+        <ul>
+          <li>Av. Barão do Rio Branco, 2370 · Sala 722</li>
+          <li>Centro, Juiz de Fora - MG</li>
+          <li><a href="https://wa.me/5532991962222" target="_blank" rel="noopener">(32) 99196-2222</a></li>
+          <li><a href="https://www.instagram.com/evidenza.estetica" target="_blank" rel="noopener">@evidenza.estetica</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="ano"></span> Evidenza Centro de Estética e Laser. Todos os direitos reservados.</span>
+      <span>Responsável Técnico Especializado · Juiz de Fora - MG</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão Flutuante do WhatsApp -->
+<a href="https://wa.me/5532991962222?text=Ol%C3%A1%2C%20estou%20no%20site%20da%20Evidenza%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos." class="wa-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp da Evidenza">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.67-1.39 1.28-1.92 1.35-.5.07-1.15.1-3.32-.8-2.77-1.15-4.54-3.98-4.68-4.16-.14-.19-1.12-1.49-1.12-2.84 0-1.35.71-2.01.96-2.28.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.07.63.48.24.57.81 1.99.88 2.14.07.14.12.32.02.51-.09.2-.14.32-.29.49-.14.17-.3.38-.43.51-.14.15-.29.31-.13.58.17.27.74 1.22 1.59 1.98 1.09.98 2.01 1.28 2.29 1.42.28.14.45.12.62-.07.17-.19.73-.85.93-1.14.2-.29.4-.24.67-.14.28.1.1.75 3.56.88 3.71.13.15.22.25.25.3.03.05.03.62-.21 1.29z"/></svg>
+</a>
+
+<script>
+// Header transparente → sólido ao rolar
+const header = document.getElementById('top');
+const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Menu mobile
+function toggleMenu(){
+  const open = header.classList.toggle('menu-open');
+  document.querySelector('.menu-toggle').setAttribute('aria-expanded', open);
+}
+function closeMenu(){
+  header.classList.remove('menu-open');
+  document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+}
+
+// Animações de entrada com IntersectionObserver
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { 
+    if (e.isIntersecting) { 
+      e.target.classList.add('in'); 
+      io.unobserve(e.target); 
+    } 
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Ano atual dinâmico no rodapé
+document.getElementById('ano').textContent = new Date().getFullYear();
+
+// Lightbox da Galeria
+const modal = document.getElementById('lightboxModal');
+const modalImg = document.getElementById('lightboxImg');
+const modalCap = document.getElementById('lightboxCap');
+
+function openLightbox(el){
+  const img = el.querySelector('img');
+  if(!img) return;
+  modalImg.src = img.src;
+  modalCap.textContent = el.getAttribute('data-title') || img.alt;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e){
+  if(e.target === modal || e.target.classList.contains('lightbox-close')){
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape' && modal.classList.contains('active')){
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>
